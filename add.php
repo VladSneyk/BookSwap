@@ -83,17 +83,13 @@ header("Location: index.php");
 if(isset($_POST["add"])){
 	if(!empty($_POST['name']) && !empty($_POST['author']) && !empty($_POST['description']))
 	{
-    //Зчитуємо дані з input text
 		$name=htmlspecialchars($_POST['name']);
 		$author=htmlspecialchars($_POST['author']);
 		$genre=htmlspecialchars($_POST['genre']);
 		$photo=htmlspecialchars($_POST['photo']);
 		$description=htmlspecialchars($_POST['description']);
-    //запис логіна з сесії в базу
 		$avtor=$_SESSION['session_username'];
 
-
-              //запит на добавлення книг в бд
                     $sql="INSERT INTO news
   					(name, author, genre, photo, description, avtor)
 						VALUES('$name','$author','$genre','$photo' ,'$description', '$avtor')";
