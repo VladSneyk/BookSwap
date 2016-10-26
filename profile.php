@@ -1,26 +1,26 @@
-<?php require_once("includes/connection.php"); ?>
 <?php
-session_start();
+include_once("includes/connection.php");
+ session_start();
+ $username= $_SESSION['session_username'];
+$resultat = mysql_query("SELECT * FROM usertbl WHERE username='$username'");
+$array = mysql_fetch_array($resultat);
 if(!isset($_SESSION["session_username"])){
 header("Location: index.php");
-}	
-
+} 
 ?>
-<?php require_once("includes/header.php"); ?>
+
 <!DOCTYPE html>
 <html>
  <section id="vse">
-    <head>
+<head>
             <meta charset="utf-8">
-                <title>Добавлення новин</title>
+                <title>Книгообмін Хмельницький</title>
                      <?php require_once("includes/connection.php"); ?>
                     <link href="css/style1.css" media="screen" rel="stylesheet">
                     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'rel='stylesheet' type='text/css'>
                     <link rel="Stylesheet" href="StyleCSS/style.css">
-                    <link rel="Stylesheet" href="StyleCSS/style1.css">
                     <link rel="Stylesheet" href="StyleCSS/menu.css">
                     <link href="StyleCSS/bootstrap.min.css" rel="stylesheet">
-                    <link href="StyleCSS/bootstrap-theme.min.css" rel="stylesheet">
                     <link href="StyleCSS/bootstrap-theme.min.css" rel="stylesheet">
                     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
                     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -79,48 +79,55 @@ header("Location: index.php");
 
 
         </header>
-	<?php
-if(isset($_POST["add"])){
-	if(!empty($_POST['name']) && !empty($_POST['author']) && !empty($_POST['description']))
-	{
-		$name=htmlspecialchars($_POST['name']);
-		$author=htmlspecialchars($_POST['author']);
-		$genre=htmlspecialchars($_POST['genre']);
-		$photo=htmlspecialchars($_POST['photo']);
-		$description=htmlspecialchars($_POST['description']);
-		$avtor=$_SESSION['session_username'];
 
-                    $sql="INSERT INTO news
-  					(name, author, genre, photo, description, avtor)
-						VALUES('$name','$author','$genre','$photo' ,'$description', '$avtor')";
-  						$result=mysql_query($sql);
-	}
-}
+<body>
+
+<!-- header begins -->
+<div id="header">
+<div id="head_right">
+    
+</div>    
+<div id="head_left">
+<div id="logo"><a href="#"></a>      
+</div>
+
+<h1>Вітаємо вас на нашому сайті!</h1> 
+    <center>
+        <div id="main">
+<!-- header ends -->
+<!-- content begins -->
+  <div id="content">
+    
+            <div id="left">
+              
+<h2>Профіль <?php echo $array['username']; ?></h2>
+ 
+ 
+ 
+<?php
+
+$result = mysql_query("SELECT * FROM usertbl WHERE username='$username'");
+    while($row=mysql_fetch_array($result)){
+        $full_prizv=$row['full_prizv'];
+        $full_name=$row['full_name'];
+        $email=$row['email'];
+        $telephone=$row['telephone'];  
+
+     echo "Прізвище:  ".$full_prizv. "<br>";
+     echo "Ім'я:  ".$full_name. "<br>";
+     echo "Email:   ".$email. "<br>";
+     echo "Телефон:  ".$telephone. "<br>";
+
+      } 
+      
 ?>
-<section class="add">
-	<form action="add.php" id="addrform" method="post" name="addrform"> 
-<p>Поля * повинні бути обов'язково заповнені</p><br><br> 
-<p><label>Введіть назву книги *<br> 
-<input clas="input" id="name" name="name" size="40" type="text"></p> 
+</center>
 
-<p><label>Введіть автора книги *<br> 
-<input class="input" id="author" name="author" size="40" type="text"></p> 
-
-<p><label>Введіть жанр книги <br> 
-<input class="input" id="genre" name="genre" size="40" type="text"></p> 
-
-<p><label>Фото<br> 
-<input class="input" id="photo" name="photo" type="file"></p> 
-
-<p><label>Введіть опис книги *<br> 
-<input class="input" id="description" name="description" size="40" type="text"></p> 
-
-<p class="submit"><input class="button" id="add" name= "add" type="submit" value="Додати"></p>
-</section>
+<footer>
+    <a href="#top">Наверх</a><br>
+        <address>(c) IT-бобри, Україна, Хмельницький, вул.Зарічанська 10/2</address>
+</footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
-
-</body>
-</html> 
