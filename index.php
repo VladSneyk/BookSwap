@@ -75,7 +75,7 @@
  <input class="input" id="full_prizv" name="full_prizv"size="32"  type="text" value="" pattern="[А-Я а-я Є є Ї ї І і]{2,}" title="Введіть свою область" required></label></p>
 
 
-<p><label for="user_pass">Мобільний номер</label>
+<p><label for="user_pass">Номер</label>
 <input class="input" id="telephone" name="telephone"size="32"   type="text" value=""></label></p>
 <script>
         $(function(){
@@ -95,7 +95,7 @@
 <input class="input" id="password" name="password"size="32"   type="password" value=""pattern="{4,15}" title="Пароль повинен мати 4-12 символів" required></p>
 
 
-<p><label for="user_pass">Повторіть пароль</label>
+<p><label for="user_pass">*Пароль</label>
 <input class="input" id="passwordd" name="passwordd"size="32"   type="password" value="" pattern="{4,15}" title="Пароль повинен мати 4-12 символів" required></p>
 
 <label>Я прочитав правила сайту </label> <br>
