@@ -67,15 +67,15 @@
       <h3><b><label>Введіть свої дані</label></b></h3>
 <table>
 
-  <p><label for="user_login">Ім'я</label>
+  <p><label for="user_login">Ім'я:</label>
  <input class="input" id="full_name" name="full_name"size="32"  type="text" value="" pattern="[А-Я а-я Є є Ї ї І і]{2,}" title="Введіть свою область" required></label></p>
 
 
-<p><label for="user_login">Прізвище</label>
+<p><label for="user_login">Прізвище:</label>
  <input class="input" id="full_prizv" name="full_prizv"size="32"  type="text" value="" pattern="[А-Я а-я Є є Ї ї І і]{2,}" title="Введіть свою область" required></label></p>
 
 
-<p><label for="user_pass">Номер</label>
+<p><label for="user_pass">Номер:</label>
 <input class="input" id="telephone" name="telephone"size="32"   type="text" value=""></label></p>
 <script>
         $(function(){
@@ -83,19 +83,19 @@
         });
         </script>
 
-<p><label for="user_pass">E-mail</label>
+<p><label for="user_pass">E-mail:</label>
 <input class="input" id="email" name="email" size="32"type="email"  value=""></label></p>
 
 
-<p><label for="user_pass">Логін</label>
+<p><label for="user_pass">Логін:</label>
 <input class="input" id="username" name="username"size="32" type="text" value=""></label></p>
 
 
-<p><label for="user_pass">Пароль</label>
+<p><label for="user_pass">Пароль:</label>
 <input class="input" id="password" name="password"size="32"   type="password" value=""pattern="{4,15}" title="Пароль повинен мати 4-12 символів" required></p>
 
 
-<p><label for="user_pass">*Пароль</label>
+<p><label for="user_pass">*Пароль:</label>
 <input class="input" id="passwordd" name="passwordd"size="32"   type="password" value="" pattern="{4,15}" title="Пароль повинен мати 4-12 символів" required></p>
 
 <label>Я прочитав правила сайту </label> <br>
