@@ -2,7 +2,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION["session_username"])){
-	header("Location: add.php");
+	header("Location: index.php");
 	}
 	if(isset($_POST["login"])){
 	if(!empty($_POST['username']) && !empty($_POST['password'])) {
@@ -23,7 +23,7 @@ while($row=mysql_fetch_assoc($query))
 
 	 $_SESSION['session_username']=$username;	
  /* Перенаправление браузера */
-   header("Location: add.php");
+   header("Location: index.php");
 	}
 	} else {
 	echo  "Invalid username or password!";
@@ -35,6 +35,14 @@ while($row=mysql_fetch_assoc($query))
 	?>
 
 	<?php include("includes/header.php"); ?>
+.......
+	<section class="session">
+<p>Добро пожаловать, <span><?php echo $_SESSION['session_username'];?>! </p>
+<p></span> <a  id="out" href="profile.php"> Особистий кабінет</a></p>
+<p></span> <a  id="out" href="logout.php"> Вийти</a> з системи</p>
+</section>
+.........
+
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="js/main.js"></script>
