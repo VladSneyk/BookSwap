@@ -1,0 +1,36 @@
+.news
+{
+	text-align: center;
+	background: pink;
+
+}
+
+.session
+{
+	text-align: right;
+	margin-right: 10px;
+
+
+}
+
+body
+{
+	background: turquoise;
+	margin: 10px;
+}
+
+header
+{
+	text-align: center;
+	font-size: 18px;
+	color: midnightblue;
+}
+
+input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+.add
+{
+	text-align: center;
+}
