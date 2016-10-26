@@ -1,0 +1,128 @@
+*{
+	font-family: Times;
+	font-weight: normal;
+}
+
+#vse
+{
+width: 1349px;
+margin: 0 auto;
+}
+
+#login_form {
+width: 1357px;
+height: 550px;
+background-color: yellow;
+margin-left: -10px;
+}
+
+#login{
+	margin-left: 0px;
+	margin-right: 20px;
+	color: white;
+}
+
+#login h2, .regtext{
+	margin-left: 100px;
+}
+
+#vk{
+	text-align:justify;
+	padding-top: 20px;
+	border:ridge 3px;
+	border-color: #FFFFFF;
+}
+
+#img_vk{
+	width: 500px;
+	height: 500px;
+}
+
+#logo{
+	text-align: left;
+	margin-left: 100px;
+	padding-top: 50px;
+}
+
+#login_form h1{
+	font-family: Arial;
+	font-size: 50px;
+	font-style: italic; /*Курсивное начертание.*/
+	font-weight: normal;
+	color: white;
+}
+
+#s1{
+	font-family: Arial;
+	font-size: 18px;
+	font-style: italic; /*Курсивное начертание.*/
+	font-weight: normal;
+	padding-left: 150px;
+	color: white;
+}
+
+#s2{
+	font-family: Arial;
+	font-size: 14px;
+	font-style: italic; /*Курсивное начертание.*/
+	font-weight: normal;
+	padding-left: 20px;
+	color: white;
+}
+
+/*Menu*/
+/*#menu{
+	width: 1325px;
+	height: 55px;
+	/*
+	background:-webkit-gradient(linear, 68% 23%, 36% 100%, from(#90B2FF), to(#0057E6));
+	border-radius: 10px;
+	*/
+	/*margin:5px auto;
+}*/
+
+footer{
+	text-align: center;
+	height: 70px;
+	padding-top: 20px;
+	border:ridge 3px;
+	border-color: #FFFFFF;
+}
+ 
+footer a{
+	color: #873c02;
+}
+
+/*===================================================================================================*/
+
+.glyphicon{
+	font-size: 80px;
+	margin-left: 30px;
+}
+
+/*===================================================================================================*/
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+  .navbar-wrapper {
+    margin-top: 10px;
+  }
+
+  .navbar-wrapper .navbar {
+    border-radius: 8px;
+  }

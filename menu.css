@@ -1,0 +1,56 @@
+#menu li {
+	display: inline; /*Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.*/
+}
+
+#menu a {
+	font-family: Times;
+	font-size: 18px;
+	font-weight: normal;
+
+	text-decoration: none;
+	text-align: center;
+	margin-top: 5px;
+	height: 50px;
+}
+
+#imgurl{
+	width: 50px;
+	height: 40px;
+	margin-top: -10px;
+}
+
+.menuha1{
+	margin-left: 600px;
+}
+
+.menuha:hover, .menuha1:hover, .active { /*hover - псевдоклас, при наведені на нього*/
+	/*
+	height: 20px;
+	border:ridge 3px;
+	border-color: #FFFFFF;
+	*/
+	background-color: white;
+	border:ridge 3px;
+	border-color: #FFFFFF;
+}
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+  .navbar-wrapper {
+    margin-top: 10px;
+  }
+
+  .navbar-wrapper .navbar {
+    border-radius: 8px;
+  }
