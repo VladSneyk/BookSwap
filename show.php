@@ -75,12 +75,16 @@ session_start();
 </div> 
 		<p>Перегляд новин</p>
 	</header>
+
     <?php  $sql = mysql_query("SELECT * FROM news");
+    // Перебираємо всі дані
         while ($nd = mysql_fetch_array ($sql))
             {?>
     <div class="panel panel-default">
   <div class="panel-body">
-    <?php  $name=$nd['name'];
+    <?php 
+    //Виводимо заголовок статті та автора що її створив
+     $name=$nd['name'];
                 $avtor=$nd['avtor'];
                 echo '<a href="edit.php?id='.$nd["id"].'">'.$name.'</a> ';
              echo "<br>";
